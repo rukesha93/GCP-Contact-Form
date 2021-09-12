@@ -4,13 +4,18 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder) {}
+
+  // convenience getter for easy access to form fields
+  get f() {
+    return this.registerForm.controls;
+  }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -23,13 +28,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  // convenience getter for easy access to form fields
-  get f() {
-    return this.registerForm.controls;
-  }
-
   onSubmit() {
-    debugger;
     this.submitted = true;
 
     // stop here if form is invalid
@@ -42,10 +41,4 @@ export class ContactComponent implements OnInit {
       'SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4)
     );
   }
-
-  onReset() {
-    this.submitted = false;
-    this.registerForm.reset();
-  }
-
 }
