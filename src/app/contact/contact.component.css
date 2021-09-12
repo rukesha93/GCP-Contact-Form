@@ -6,7 +6,7 @@ body{
     height: 400px;
 }
 .col-md-3{
-    background: #ff9b00;
+    background: #4285F4;
     padding: 4%;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
@@ -18,10 +18,10 @@ body{
     margin-bottom: 15%;
 }
 .contact-info h2{
-    margin-bottom: 10%;
+margin-bottom: 10%;
 }
 .col-md-9{
-    background: #fff;
+    background: whitesmoke;
     padding: 3%;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
@@ -30,7 +30,7 @@ body{
     font-weight:600;
 }
 .contact-form button{
-    background: #25274d;
+    background-color: #1a73e8;
     color: #fff;
     font-weight: 600;
     width: 25%;
