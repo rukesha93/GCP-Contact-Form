@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
 
   {
     path: '',
-    component: AppComponent,
+    component: LayoutComponent,
     children: [
       {
         path: 'contact',
